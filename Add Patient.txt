@@ -1,0 +1,29 @@
+{
+  "patientName": "Jane Smith",
+  "patientDob": "1985-03-20T08:37:55.412Z",
+  "patientPhone": "9876533210",
+  "patientEmail": "janesmith@example.com",
+  "patientPassword": "StrongPassword123",
+  "gender": "Female",
+  "fatherName": "David Smith",
+  "maritalStatus": "Married",
+  "bloodGroup": "B-",
+  "symptoms": "string",
+  "diagnosis": "string"
+}
+
+-----------------Real Data--------------
+
+{
+  "patientName": "Satyam Singh",
+  "patientDob": "2002-02-29T06:39:12.554Z",
+  "patientPhone": "7037192194",
+  "patientEmail": "satyamsinghindia8@gmail.com",
+  "patientPassword": "satyam123",
+  "gender": "Male",
+  "fatherName": "Mr. XYZ Singh",
+  "maritalStatus": "Single",
+  "bloodGroup": "O+",
+  "symptoms": "N/A",
+  "diagnosis": "N/A"
+}

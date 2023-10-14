@@ -1,0 +1,14 @@
+{
+  "patientId": 7,
+  "patientName": "Jane Singh",
+  "patientDob": "1985-03-22T09:21:06.441Z",
+  "patientPhone": "1235555590",
+  "patientEmail": "janesingh@example.com",
+  "patientPassword": "NewSecurePassword",
+  "gender": "Male",
+  "fatherName": "Michael Doe",
+  "maritalStatus": "Single",
+  "bloodGroup": "A+",
+  "symptoms": "Fever, Headache",
+  "diagnosis": "Common cold"
+}
