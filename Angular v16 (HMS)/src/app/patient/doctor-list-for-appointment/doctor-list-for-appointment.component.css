@@ -1,0 +1,15 @@
+.doctorNav h1{
+  margin: 1% 0 0 2%;
+  float: left;
+}
+
+.example-spacer {
+  flex: 1;
+  padding-top: 5px;
+  color: #4731D0;
+  font-family: 'Tw Cen MT (Headings)';
+}
+
+.doctorNav mat-form-field{
+    float: right;
+  }

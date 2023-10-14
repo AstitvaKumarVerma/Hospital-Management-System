@@ -1,0 +1,68 @@
+/* Container Styles */
+.container {
+    text-align: center;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Title Styles */
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Calendar Styles */
+#calendar {
+    width: 100%;
+    background-color: #fff; ;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Day Header Styles */
+.fc-head {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+/* Event Styles */
+.fc-event {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* Hover Effect for Events */
+.fc-event:hover {
+    background-color: #0056b3;
+}
+
+/* Today's Date Styles */
+.fc-today {
+    background-color: #f2f2f2;
+    border-radius: 50%;
+}
+
+/* Button Styles (if you have navigation buttons) */
+.fc-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 14px;
+}
+
+/* Hover Effect for Buttons */
+.fc-button:hover {
+    background-color: #0056b3;
+}

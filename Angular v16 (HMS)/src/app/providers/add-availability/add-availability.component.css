@@ -1,0 +1,70 @@
+/* Center the form vertically and horizontally */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    background-color: #f0f0f0; /* Optional background color */
+  }
+  
+  /* Center-align the form title */
+  .form-header {
+    text-align: center;
+  }
+  
+  /* Center-align the form actions (button) */
+  .form-actions {
+    text-align: center;
+    margin-top: 16px; /* Add some space above the button */
+  }
+  
+  /* Style form rows */
+  .form-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 16px;
+  }
+  
+  /* Style form fields within a row */
+  .form-field {
+    flex: 1;
+    margin-right: 16px; /* Add some space between fields */
+  }
+  
+  /* Style form labels */
+  .mat-label {
+    font-weight: bold;
+  }
+  
+  /* Style input elements */
+  .mat-input-element {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+    font-size: 16px;
+  }
+  
+  /* Style the Submit button */
+  button {
+    background-color: #007bff; /* Primary color */
+    color: #fff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+  }
+  
+  /* Optional: Add some spacing around the form */
+  .form-container {
+    padding: 24px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #fff; /* Form background color */
+  }  

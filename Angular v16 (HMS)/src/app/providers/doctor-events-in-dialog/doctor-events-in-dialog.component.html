@@ -1,0 +1,22 @@
+<div class="table">
+    <h1 style="text-align: center;">Date : {{this.data}}</h1>
+    <table border="2px">
+        <thead>
+            <tr>
+                <th>Patient Name</th>
+                <th>TimeSlot</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let item of checkbBookEvents">
+
+                <td>{{item.title}}</td>
+                <td>{{item.start}}</td>
+            </tr>
+        </tbody>
+    </table>
+    <br>
+    <div class="button-group">
+        <button mat-raised-button color="warn" type="button" (click)="onCancel()">Back</button>
+    </div>
+</div>

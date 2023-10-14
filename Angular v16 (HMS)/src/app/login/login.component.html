@@ -1,0 +1,27 @@
+<div class="body">
+    <div class="login-container">
+        <h2 style="color:rgb(255,255,255)">Hospital Management System - Login</h2>
+        <form [formGroup]="LoginForm" (ngSubmit)="Login(LoginForm.value)">
+            <input type="text" formControlName="email" placeholder="Email" required>
+            <mat-error *ngIf="LoginForm.get('email')?.hasError('required') && LoginForm.controls['email'].touched">
+                <h5 style="color: #FFF; text-align: left;">*email required</h5>
+              </mat-error>
+              
+            <input type="password" formControlName="password" placeholder="Password" minlength="6" maxlength="15" [type]="hide ? 'password' : 'text'"required>
+            <mat-icon matSuffix (click)="hide = !hide" style="position: fixed; margin:1.5% 0% 0% -2%;  cursor: pointer;">{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+            <mat-error *ngIf="LoginForm.get('password')?.hasError('minlength') || LoginForm.get('password')?.hasError('maxlength')  || (LoginForm.controls['password'].touched && LoginForm.controls['password'].invalid)">
+                <h5 style="color: #FFF; text-align: left;">*Password must be of 6-15 char.</h5>
+              </mat-error>
+
+            <br>
+            <div style="text-align: left;">
+                <p>Don't have an account? <span style="color: #fff; cursor: pointer;"><u (click)="openRegisterForm()">Register</u></span> as a Patient</p>
+            </div>
+
+            <button mat-raised-button style="background-color: rgb(255,255,255)" type="submit">Login</button>
+        </form>
+
+    </div>
+</div>
+
+

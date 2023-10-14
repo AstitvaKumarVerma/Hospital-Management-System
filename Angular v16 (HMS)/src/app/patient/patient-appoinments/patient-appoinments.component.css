@@ -1,0 +1,33 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: Arial, sans-serif;
+    margin: 20px auto;
+    background: -webkit-linear-gradient(top, rgb(0, 171, 255), rgb(100, 0, 189) 100%);
+    color: white;
+  }
+
+  th, td {
+    border: 1px solid white;
+    padding: 10px;
+    text-align: left;
+  }
+
+  th {
+    background-color: rgba(255, 255, 255, 0.1);
+    font-weight: bold;
+  }
+
+  tr:nth-child(even) {
+    background-color: rgba(255, 255, 255, 0.1);
+  }
+
+  tr:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.2);
+  }
+
+
+  /* Increase font size of pagination controls */
+.myPaginator{
+  font-size: 19px !important;
+}

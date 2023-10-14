@@ -1,0 +1,34 @@
+<div class="body">
+    <div class="doctor-container">
+        <div class="profile-circle">
+            <!-- Add your dummy image here -->
+            <img src="../assets/images/dummyProfileImage.jpg"  alt="">
+        </div>
+        <div class="editProfile" style="text-align: center; color: rgb(47,91,224); cursor: pointer;">
+            <a (click)="editProfile()">Edit Profile</a>
+        </div>
+        
+        <div class="doctor-info">
+            <div class="info-row">
+                <div class="info-label">Name:</div>
+                <div class="info-value">{{DoctorData.doctorName}}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Date of Birth:</div>
+                <div class="info-value">{{DoctorData.doctorDob | date}}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Phone:</div>
+                <div class="info-value">{{DoctorData.doctorPhone}}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Email:</div>
+                <div class="info-value">{{DoctorData.doctorEmail}}</div>
+            </div>
+            <div class="info-row">
+                <div class="info-label">Gender:</div>
+                <div class="info-value">{{DoctorData.gender}}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,21 @@
+<div class="doctor-details">
+    <div class="letter-header">
+        <div class="hospital-name">Kailash Hospital</div>
+        <div class="address">123 Main Street, Dehradun, Bharat</div>
+        <div>Date: {{ currentDate | date }}</div>
+    </div>
+    <div class="letter-content">
+        <h4 style="text-align:center"><b>Doctor Details</b></h4>
+        <p><span class="info-label">Doctor Name:</span> <span class="info-data">{{DoctorData.doctorName}}</span></p>
+        <p><span class="info-label">Date of Birth:</span> <span class="info-data">{{DoctorData.doctorDob | date}}</span></p>
+        <p><span class="info-label">Email:</span> <span class="info-data">{{DoctorData.doctorEmail}}</span></p>
+        <p><span class="info-label">Password:</span> <span class="info-data">{{DoctorData.doctorPassword}}</span></p>
+        <p><span class="info-label">Phone Number:</span> <span class="info-data">{{DoctorData.doctorPhone}}</span></p>
+        <p><span class="info-label">Gender:</span> <span class="info-data">{{DoctorData.gender}}</span></p>
+    </div>
+    <div class="signature">
+        <div><h4>Doctor's e-Signature</h4></div>
+        <div>{{DoctorData.doctorName}}</div>
+    </div>
+</div>
+

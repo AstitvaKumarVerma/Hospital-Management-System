@@ -1,0 +1,75 @@
+<div class="form-container">
+    <div class="form-header">
+        <h2 class="form-title">Provide Availability</h2> <!-- Centered title -->
+      </div>
+    <form [formGroup]="availabilityForm">
+      <div class="form-row">
+        <div class="form-group">
+          <mat-form-field class="form-field">
+            <mat-label>Start Date</mat-label>
+            <input [min]="minDate" matInput formControlName="startDate" placeholder="First Date" [matDatepicker]="startDatePicker" required>
+            <mat-datepicker-toggle matSuffix [for]="startDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #startDatePicker></mat-datepicker>
+          </mat-form-field>
+          <mat-error *ngIf="availabilityForm.controls['startDate'].touched && availabilityForm.controls['startDate'].invalid">
+            *Plz Select Start Date
+          </mat-error>
+        </div>
+        
+        <div class="form-group">
+          <mat-form-field class="form-field">
+            <mat-label>End Date</mat-label>
+            <input [min]="minDate" matInput formControlName="endDate" placeholder="Last Date" [matDatepicker]="endDatePicker" required>
+            <mat-datepicker-toggle matSuffix [for]="endDatePicker"></mat-datepicker-toggle>
+              <mat-datepicker #endDatePicker></mat-datepicker>
+          </mat-form-field>
+          <mat-error *ngIf="availabilityForm.controls['endDate'].touched && availabilityForm.controls['endDate'].invalid">
+            *Plz Select End Date
+          </mat-error>
+        </div>
+      </div>
+  
+      <div class="form-row">
+
+        <div class="form-group">
+          <mat-form-field class="form-field" style="width: 108%;">
+            <mat-label>Start Time(*Follow 24 hour Time)</mat-label>
+            <input matInput formControlName="startTime" type="time">
+          </mat-form-field>
+          <br>
+          <mat-error *ngIf="availabilityForm.controls['startTime'].touched && availabilityForm.controls['startTime'].invalid">
+            *Plz Enter Start Time
+          </mat-error>
+        </div>
+  
+        <div class="form-group">
+          <mat-form-field class="form-field">
+            <mat-label>End Time(*Follow 24 hour Time)</mat-label>
+            <input matInput formControlName="endTime" type="time">
+          </mat-form-field>
+          <br>
+          <mat-error *ngIf="availabilityForm.controls['endTime'].touched && availabilityForm.controls['endTime'].invalid">
+            *Plz Enter End Time
+          </mat-error>
+        </div>
+      </div>
+  
+      <div class="form-row">
+
+        <div class="form-group">
+          <mat-form-field class="form-field">
+            <mat-label>Interval (Minutes)</mat-label>
+            <input matInput formControlName="intervalMinutes" type="number">
+          </mat-form-field>
+          <mat-error *ngIf="availabilityForm.controls['intervalMinutes'].touched && availabilityForm.controls['intervalMinutes'].invalid">
+            *Plz Enter Interval Time
+          </mat-error>
+        </div>
+      </div>
+  
+      <div class="form-actions">
+        <button mat-raised-button color="primary" (click)="onSubmit()">Submit</button> <!-- Centered button -->
+      </div>
+    </form>
+  </div>
+  

@@ -1,0 +1,30 @@
+<h1 style="text-align: center; color: rgb(92,13,194); font-family: Arial, sans-serif;">
+    <b>Your Appoinments</b>
+</h1>
+<table>
+    <thead>
+        <tr>
+            <th>Patient Name</th>
+            <th>Doctor Name</th>
+            <th>Appointment Date</th>
+            <th>Appointment Time</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let data of PateintAppoinments  | paginate : pagingConfig; let i = index">
+            <td>{{data.patientName}}</td>
+            <td>{{data.doctorName}}</td>
+            <td>{{data.appoinmentDate | date}}</td>
+            <td>{{data.appoinmentTime}}</td>
+        </tr>
+    </tbody>
+</table>
+
+<br>
+<div class="d-flex justify-content-center">
+    <pagination-controls class="myPaginator"
+    previousLabel="Prev"
+    nextLabel="Next"
+    (pageChange)="onTableDataChange($event)">
+    </pagination-controls>
+  </div>

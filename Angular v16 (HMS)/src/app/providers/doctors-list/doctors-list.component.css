@@ -1,0 +1,25 @@
+.doctorNav mat-form-field{
+  float: right;
+}
+
+.doctorNav button{
+  margin: 15px 0px 0px 10px;  /*top right bottom left*/
+  float: left;
+}
+
+
+
+/* table {
+    width: 100%;
+  }
+  
+  .mat-mdc-form-field {
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  td, th {
+    width: 25%;
+  } */
+  
+  

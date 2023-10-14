@@ -1,0 +1,46 @@
+/* CSS */
+.payment-form {
+  text-align: center;
+  margin: 20px;
+  padding: 20px;
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.payment-form h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.payment-form button {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.payment-form button:hover {
+  background-color: #0056b3;
+}
+
+.payment-success, .payment-failure {
+  text-align: center;
+  margin-top: 20px;
+  padding: 20px;
+  font-size: 24px;
+  border-radius: 5px;
+}
+
+.payment-success {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.payment-failure {
+  background-color: #dc3545;
+  color: #fff;
+}

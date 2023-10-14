@@ -1,0 +1,128 @@
+<div class="add-patient-container">
+  <div class="dialog-header">
+    <h2 style="padding-top: 20px;">Register Patient</h2>
+    <button mat-icon-button (click)="closeDialog()">
+      <mat-icon>close</mat-icon>
+    </button>
+  </div>
+  <form [formGroup]="patientForm" (ngSubmit)="onSubmit()" class="patient-form">
+    <div class="form-row">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="patientName" placeholder="Patient Name*" required>
+          <mat-error *ngIf="patientForm.controls['patientName'].touched && patientForm.controls['patientName'].invalid">
+            *Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="fatherName" placeholder="Father's Name*" required>
+          <mat-error *ngIf="patientForm.controls['fatherName'].touched && patientForm.controls['fatherName'].invalid">
+            *Father's Name is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="patientPhone" placeholder="Phone Number*" minlength="10" maxlength="10" required>
+          <mat-error *ngIf="patientForm.get('patientPhone')?.hasError('minlength') || patientForm.get('patientPhone')?.hasError('maxlength')">
+            Phone must be 10 digits long.
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group" style="width: 50px;">
+        <mat-form-field>
+          <input matInput formControlName="patientDob" placeholder="Date of Birth*" [matDatepicker]="dobPicker" required [max]="maxDate">
+          <mat-datepicker-toggle matSuffix [for]="dobPicker"></mat-datepicker-toggle>
+          <mat-datepicker #dobPicker></mat-datepicker>
+          <mat-error *ngIf="patientForm.get('patientDob')?.hasError('required')">
+            *Date of Birth is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="patientEmail" placeholder="Email*" type="email">
+          <mat-error *ngIf="patientForm.get('patientEmail')?.hasError('email')">
+            Please enter a valid email address.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="patientPassword" placeholder="Password*"  minlength="6" maxlength="12" required>
+          <mat-error *ngIf="patientForm.get('patientPassword')?.hasError('minlength') || patientForm.get('patientPassword')?.hasError('maxlength')">
+            Password must be of 8-12 char.
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Gender</mat-label>
+          <mat-select formControlName="gender" required>
+            <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+          <mat-error *ngIf="patientForm.get('gender')?.hasError('required')">
+            *Gender is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Marital Status</mat-label>
+          <mat-select formControlName="maritalStatus" required>
+            <mat-option value="Single">Single</mat-option>
+            <mat-option value="Married">Married</mat-option>
+            <mat-option value="Divorced">Divorced</mat-option>
+            <mat-option value="Others">Others</mat-option>
+          </mat-select>
+          <mat-error *ngIf="patientForm.get('maritalStatus')?.hasError('required')">
+            *Marital Status is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <mat-label>Blood Group</mat-label>
+          <mat-select formControlName="bloodGroup" required>
+            <mat-option value="A+">A+</mat-option>
+            <mat-option value="A-">A-</mat-option>
+            <mat-option value="B+">B+</mat-option>
+            <mat-option value="B-">B-</mat-option>
+            <mat-option value="O+">O+</mat-option>
+            <mat-option value="O-">O-</mat-option>
+            <mat-option value="AB+">AB+</mat-option>
+            <mat-option value="AB-">AB-</mat-option>
+          </mat-select>
+          <mat-error *ngIf="patientForm.get('bloodGroup')?.hasError('required')">
+            *Blood Group is required
+          </mat-error>
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="symptoms" placeholder="Symptoms">
+        </mat-form-field>
+      </div>
+      <div class="form-group">
+        <mat-form-field>
+          <input matInput formControlName="diagnosis" placeholder="Diagnosis">
+        </mat-form-field>
+      </div>
+    </div>
+    <!-- <button mat-button color="primary" type="submit">Submit</button> -->
+    <button mat-raised-button color="primary" type="submit">Submit</button>
+  </form>
+</div>
