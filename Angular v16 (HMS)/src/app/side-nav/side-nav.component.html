@@ -1,0 +1,105 @@
+<!-- navigation.component.html -->
+<mat-sidenav-container id="mySidenav" class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" mode="side">
+        <mat-nav-list style="color: white;">
+            <a mat-list-item (click)="dashboardImage()">
+                <mat-icon style="color: rgb(255,255,255);">dashboard</mat-icon>
+                Dashboard
+            </a>
+        </mat-nav-list>
+        <mat-divider></mat-divider>
+
+        <mat-nav-list style="color: white;"  *ngIf="(role == 'Patient')">
+            <a mat-list-item routerLink="patients/patient-profile" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">account_circle</mat-icon>
+                Profile
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Patient')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role == 'Provider')">
+            <a mat-list-item routerLink="providers/doctor-profile" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">account_circle</mat-icon>
+                Profile
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Provider')"></mat-divider>
+
+        <mat-nav-list style="color: white;"  *ngIf="(role == 'Admin' || role =='Provider')">
+            <a mat-list-item routerLink="patients" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">group</mat-icon>
+                Patient Module
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Admin' || role =='Provider')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role == 'Admin' || role =='Provider')">  
+            <a mat-list-item routerLink="providers" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">medical_services</mat-icon>
+                Doctor Module
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Admin' || role =='Provider')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role =='Provider')"> 
+            <a mat-list-item routerLink="providers/doctor-Availability" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">alarm_add</mat-icon>
+                Add Availability
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role =='Provider')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role =='Provider')"> 
+            <a mat-list-item routerLink="providers/doctor-events" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">today_calander</mat-icon>
+                Your Schedule
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role =='Provider')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role == 'Patient')">
+            <a mat-list-item routerLink="patients/doctor-list-for-appointment" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">event_available</mat-icon>
+                Book Appoinment
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Patient')"></mat-divider>
+
+        <mat-nav-list style="color: white;" *ngIf="(role == 'Patient')">
+            <a mat-list-item routerLink="patients/patient-appoinments" (click)="showRoute()">
+                <mat-icon style="color: rgb(255,255,255);">timer</mat-icon>
+                Your Appoinments
+            </a>
+        </mat-nav-list>
+        <mat-divider *ngIf="(role == 'Patient')"></mat-divider>
+
+        <!-- Add more navigation links here -->
+    </mat-sidenav>
+
+    <mat-sidenav-content>
+        <!-- Main content of your dashboard -->
+        <mat-toolbar color="primary">
+            <button mat-icon-button (click)="sidenav.toggle()">
+                <mat-icon style="margin-top: -10px;">menu</mat-icon>
+            </button>
+            <span class="example-spacer">Hospital Management System</span>
+
+            <button mat-raised-button color="accent" (click)="logout()"
+                aria-label="Example icon-button with share icon">
+                <span class="material-icons">logout</span>Logout
+            </button>
+        </mat-toolbar>
+
+        <mat-divider></mat-divider>
+
+        <div *ngIf="isDisplay" style="height:86.3%; width:100%; margin-right:16px;">
+            <router-outlet></router-outlet>
+        </div>
+
+
+        <div class="image" *ngIf="isShow == true" style="height:86.3%; width:100%">
+            <img src="../assets/images/FrontPageImage1.jpg" height="93.66%" width="100%" alt="fgfg">
+        </div>
+
+    </mat-sidenav-content>
+</mat-sidenav-container>
